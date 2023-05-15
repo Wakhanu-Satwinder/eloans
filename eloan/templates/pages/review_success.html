@@ -1,0 +1,39 @@
+{% extends 'pages/base.html'%}
+{%block title%}Review Success{%endblock%}
+{%load static%}
+{%load crispy_forms_tags%}
+
+{%block content%}
+
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+
+		{%if messages%}
+          {%for message in messages%}
+          <div class="alert alert-{{message.tags}}">{{message}}</div>
+          {%endfor%}
+       {%endif%}
+      
+      <!--<div class="card-body">
+        <h5 class="card-title">You have been logged out</h5>
+        <p class="card-text">
+            Thanks for your time, contact me for any comments or suggestions using my email address.
+        </p>
+        <br><hr><a href="{% url 'login' %}" class="btn btn-primary">Sign in again</a>
+        </div>-->
+
+
+
+	</div>
+	<div class="col-md-4">
+		
+		{{request.user.contact.review}}
+	</div>
+	
+</div>
+
+
+
+
+{%endblock%}

@@ -1,0 +1,33 @@
+<!-- inherits the code of basic admin html template -->
+{% extends 'admin/login.html'  %}
+
+<!-- including the static file -->
+{% load i18n static %}
+
+<!-- custom block for changing the style -->
+{% block extrastyle %}
+{{ block.super }}
+
+<!-- overriding the old style of header -->
+<style>
+#header {
+  background-color: #5d64dd  !important;
+}
+</style>
+{% endblock %}
+
+
+{% block branding %}
+<h1>
+  <span style="color: #fff !important"> Customized login panel </span>
+  <br />
+  <small>{% block head_title %}{% endblock %}</small>
+</h1>
+{% endblock %}
+
+
+{% block content_title %}
+<p class="lead" style="font-size: larger">
+A simple login panel.
+</p>
+{% endblock %}

@@ -1,0 +1,104 @@
+{%extends 'pages/base.html'%}
+{% load static %}
+{%block title%} Home{%endblock%}
+
+{%block content%}
+
+<div class="row">
+
+  <div class="col-md-8">
+ 
+      <h4>What You should know <img src="{%static 'img/search.png'%}" style="height: 35px;" /> </h4>
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home" role="tab">How to apply</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Loan calculator</a>
+        </li>
+        
+       
+      </ul>
+
+      <div class="tab-content" role="tablist">
+        <div class="tab-pane active" id="home" role="tabpanel">
+         <p> eloan is a web loaning app where you can apply any loan amount between maximum limit Ksh.20,000/=</p>
+         <p>Steps:</p>
+         <p>1.Visit the website (www.eloan.com)</p>
+         <p>2.Register your bio data</p>
+         <p>3.Login to your account</p>
+         <p>4.Fill guaranters details  of the amount of loan you want to apply then you submit them</p>
+         <p style="background-color:yellow;"><i>NB:Loan application take 3 days to be processed.You'll receive the loan via m-pesa at interest rate of 20% if paid after One(1) weeek</i></p>
+        </div>
+<div class="tab-pane" id="profile" role="tabpanel">
+  
+
+  
+    <script src="{%static 'js/app.js'%}"></script>
+
+
+ </div>     
+  </div>
+
+</div> 
+<div class="col-md-4"></div> 
+</div>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><p style="position:absolute; "><i><h4 style="color:blue;">Why choose street financiers as your preferred loan site?</h4></i></p>
+  </div>
+  <div class="col-md-4"></div>
+
+</div>
+<div class="row"> 
+
+<div class="col-md-4">
+   <div class="card" style="margin-top: 20px;border-radius:30px;">
+    <!--<img src="https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1627731351-101156.png" alt="img">-->
+    <div class="text">
+      <h2 style="color: blue;"> <span class="fas fa-user"></span>Simple </h2>
+    
+     <p>Instant money tranfer</p>
+    <!--<a href="https://www.studytonight.com/"> Click here </a>-->
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+   <div class="card" style="margin-top: 20px;border-radius:30px;">
+    <!--<img src="https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1627731351-101156.png" alt="img">-->
+    <div class="text">
+      <h2 style="color: blue;"><span class="fas fa-lock"></span> Reliable </h2>
+    <p>Confidentiality is our priority </p>
+    <!--<a href="https://www.studytonight.com/"> Click here </a>-->
+    </div>
+  </div>
+
+
+</div>
+
+<div class="col-md-4">
+   <div class="card" style="margin-top: 20px;border-radius:30px;">
+    <!--<img src="https://s3.ap-south-1.amazonaws.com/s3.studytonight.com/tutorials/uploads/pictures/1627731351-101156.png" alt="img">-->
+    <div class="text">
+      <h2 style="color: blue;"><span class="fas fa-money-bill"></span>Profitable</h2>
+   <!-- <p>Less Paperworks </p>-->
+    <a href="{%url 'loans'%}" style="color: red;">Apply Now </a>
+    </div>
+  </div>
+
+</div>
+</div> <br/>
+<!--<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <button class="btn btn-primary block" style="margin-left:120px;margin-top: 10px;padding-top:0px; border-radius:40px;"><i><h3>Apply Now</h3></i></button>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>-->
+
+    
+{% endblock %}

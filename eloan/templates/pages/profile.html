@@ -1,0 +1,77 @@
+{%extends 'pages/base.html'%}
+{% load static %}
+{%block title%}profile{%endblock%}
+
+{%block content%}
+<div class="row">
+	<div class="col-md-4">
+		
+<button type="submit" class="btn btn-primary" style="border-radius: 30px; margin-top: 10px;" onclick="window.location='{% url 'password_change' %}'">  Reset Password </button>
+<a href="{% url 'password_change' %}"><i>Forgot Password?</i></a>
+
+
+	</div>
+	<div class="col-md-4">
+		<table class="table table-secondary" style="margin-top: 20px;">
+      	<tr style="color:blue;background-color:black;"><td>Bio Data</td><td>  <span class="fas fa-user"></td></tr>
+      	<tr>
+      		<td><b>Username:</b></td>
+      		<td>{{request.user.username}} </td>
+      	</tr>
+      	<tr>
+      		<td><b> Email:</b></td>
+      		<td>{{request.user.email}}</td>
+      	</tr>
+      	<tr>
+      		<td><b>First Name:</b></td>
+      		<td>{{ user.first_name }}</td>
+      	</tr>
+      	<tr>
+      		<td><b>Last Name:</b></td>
+      		<td>{{ user.last_name }}</td>
+      	</tr>
+      	<tr>
+      		<td><b>Date joined</b></td>
+      		<td>{{request.user.date_joined}}</td>
+      	</tr>
+      	
+      	<tr>
+      		<td><b>Phone Number:</b></td>
+      		<td>{{request.user.phone_no}}</td>
+      	</tr>
+        <tr>
+          <td><i><b>County:</b></i></td>
+          <td>{{request.user.county}}</td>
+        </tr>
+        <tr>
+          <td><i><b>ID Number:</b></i></td>
+          <td>{{request.user.id_number}}</td>
+        </tr>
+      	<tr>
+      		<td><i><b>Applied Loan:</b></i></td>
+          <td>
+            {%for loans in loans %}
+              Ksh. {{ loans.loan_amt }}.00/=
+            {% endfor %}
+          </td>
+      	</tr>
+       
+      	<tr>
+      		<td>
+      			<button class="btn btn-outline-primary" >Update<span class="fas fa-pencil-alt" style="height: 5px;"></span></button>
+      		</td>
+      	</tr>
+      </table>
+	</div>
+
+
+<div class="col-md-4">
+	
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

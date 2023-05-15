@@ -1,0 +1,22 @@
+html{
+	box-sizing:border-box;
+}
+*,
+*:before,
+*:after{
+	box-sizing:inherit;
+}
+.l-wrap{
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.three-col-grid .grid-item{
+	width: 33.33333%;
+	float: left;
+}
+.three-col-grid:after{
+	display: table;
+	clear: both;
+	content: '';
+}

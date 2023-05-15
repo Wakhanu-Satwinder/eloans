@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+{% block title %}Logout{% endblock title %}
+
+{%load static%}
+{%load crispy_forms_tags%}
+{%load crispy_forms_filters%}
+{% block content %}
+    <div class="card" style="width: 18rem;margin-top: 20px;">
+        <div class="card-body">
+        <h5 class="card-title" style="color: green;">You have been logged out</h5>
+        <p class="card-text">
+            Thanks for your time, contact me for any comments or suggestions using my email address.
+        </p>
+        <br><hr><a href="{% url 'login' %}" class="btn btn-primary">Sign in again</a>
+        </div>
+    </div>
+
+
+{% endblock content %}

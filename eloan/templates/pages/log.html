@@ -1,0 +1,68 @@
+{%extends 'pages/base.html'%}
+{%block title%}Login{%endblock%}
+{%load static%}
+{%load crispy_forms_tags%}
+{%load crispy_forms_filters%}
+<body>
+{%block content %}
+<div class="row">
+<div class="col-md-4">
+
+  <!--<div class="card" style=" margin-top:15px; height:380px; width:auto;padding-top: 0px;">
+  <div class="card-header" style="background-color: blue;color:white; padding-top:5px;"><h3>Login</h3></div>
+  <div class="card-body">
+    <form class="form-control-sm" method="POST">
+    {%csrf_token %}
+    {{form|crispy }}-->
+    <!--{% for field in form %}
+      <p>
+        <small style="color:black">{{ field.label_tag }}</small><br>
+        {{ field }} <br/>
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}-->
+   <!-- <button type="submit" class="btn btn-warning" style="border-radius: 30px;">Sign in<span class="fas fa-arrow-alt-circle-right"></span></button>
+    <p style="color: grey">Dont have an account? <a href="{%url 'register' %}">sign up here</a></p>
+  </form>
+  </div>
+</div>-->
+
+</div>
+
+<div class="col-md-4">
+
+
+
+<div class="container">
+  {%if messages%}
+  {%for message in messages%}
+     <div class="alert alert-{{message.tags}}">{{message}}</div>
+  {%endfor%}
+{%endif%}
+
+    <button class="btn btn-primary" value="submit" 
+    onclick="window.location='{%url 'login'%}'" style="margin-right: 10px; border-radius:30px;">Login<span class="icon login"></span>
+    </button>
+
+</div>
+
+
+
+
+</div>
+<div class="col-md-4">
+
+
+
+
+</div> 
+</div>
+
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'admin/base_site.html' %}
+{% load i18n static %}
+{% block title%}{{title}}|{%trans "Custom Admin Title"%}{%endblock%}
+{% block extrastyle%}
+<link rel="stylesheet" type="text/css" href="{ static 'css/admin_color.css'}">
+{%endblock%}
+
+
+{%block nav-global%}{%endblock%}
+
+{%block branding%}
+<h1 id="site-name">{%trans "Custom Admin Title"%}</h1>
+{%endblock%}
+
+<!--{% block extrahead %}
+{{ block.super }}
+<style>
+  :root {
+    --primary: #4d4d4d;
+    --secondary: #1a1a1a;
+    --accent: #73cba4;
+    --primary-fg: #fff;
+    --header-color: #ccffe8;
+    --darkened-bg: #f5fffa;
+  }
+</style>
+{% endblock %}-->

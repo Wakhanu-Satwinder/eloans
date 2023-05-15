@@ -1,0 +1,67 @@
+{%extends 'pages/base.html'%}
+{% load static %}
+{%block title%}index{%endblock%}
+
+{%block content%}
+
+<!--creating containers-->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{%static 'img/back4.jpeg'%}" alt="First Slide" style="width:100%; height: 570px; opacity:0.5;" />
+      <div class="carousel-caption" style="margin-bottom:150px;">
+        <h1 style=" opacity: 1.5; color: red;"><b>About</b></h1>
+        <h2  style="color: black;"> <p>This is a loan application website for fast affordable loans </p>
+        </h2>
+        
+        <button type="submit" class="btn btn-danger" value="submit" 
+        onclick="window.location='{%url 'loans'%}'" >APPLY</button>
+        
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="{%static 'img/graph.jpeg'%}" alt="Second Slide"  style="width:100%; height: 570px; opacity:0.5;">
+      <div class="carousel-caption" style="margin-bottom:170px;">
+        <h1 style="opacity: 1.5; color: blue;">Visualization</h1>
+        <h2  style="color: black;"><p>You can be able to view various data and make future predictions through data visualization here</p></h2>
+        
+        <button type="submit" class="btn btn-success" value="submit" 
+        onclick="window.location='#'" >SEE MORE </button>
+      
+    </div>
+    </div>
+
+<div class="carousel-item">
+      <img src="{%static 'img/banner.jpg'%}" alt="Third Slide" style="width:100%; height:570px; opacity:0.5;"/>
+      <div class="carousel-caption" style="margin-bottom:120px;">
+        <h1 style="opacity:1.5; color: red;">Contact Us</h1>
+        <h2 style="color: black;"><p>You can get in touch with the management or developer to leave your reviews</p>
+        </h2> <br/>
+        
+        <button type="submit" class="btn btn-warning btn-circle " value="submit" 
+        onclick="window.location='{%url 'contact'%}'" > Contact </button>
+        
+      </div>
+    </div>
+</div>
+  <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+   </div>
+
+ 
+{% endblock %}

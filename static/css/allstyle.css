@@ -1,0 +1,140 @@
+fieldset{
+    background-color: lightgrey;
+    width: 300px;
+    height: auto;
+    border: 2px solid green;
+    padding: 50px;
+    margin: 20px;
+    margin-top: 60px;
+  }
+  .bg{
+                background-image:url("/static/img/eloan 3.jpg");
+  /*opacity:0.6;*/
+                /*height: 800px;*/
+                height: auto;
+                width: 100%;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover;
+  /*filter:blur(8px);
+  -webkit-filter: blur(8px);*/
+           }
+  .icon::after{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .login::after {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
+  }
+  .mr-auto{
+    margin-right: 0 !important;
+  }
+
+input[type="file"] {
+ outline: none;
+ cursor:pointer;
+ font-size: 17px;
+}
+#range-label {
+ width:15%;
+ padding:5px;
+ background-color: #1BBA93;
+ color:white;
+ border-radius: 5px;
+ font-size: 17px;
+ position: relative;
+ top:-8px;
+}
+::-webkit-input-placeholder {
+ color:#d9d9d9;
+}
+
+        .calculator {
+            width:auto;
+            height: 360px;
+            background-color: green;
+            position:relative;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 20px 0px 0px 100px;
+            margin-bottom:30px;
+            border-radius: 50px;
+            color: white;
+        }
+
+      
+        input[type=text]{
+        	border: none;
+        	border-bottom: 2px solid green;
+        }
+        input[type=email]{
+        	border: none;
+        	border-bottom: 2px solid green;
+        }
+        input[type=password]{
+        	border: none;
+        	border-bottom: 2px solid green;
+        }
+        .container{
+             border-radius:5px;
+             background-color: #f2f2f2;
+             padding: 20px;
+             margin-top: 15px;
+        }
+        .footer {
+             position: fixed;
+             left: 0;
+             bottom: 0;
+             height:30px;
+             width: 100%;
+             background-color:black;
+             color: white;
+             text-align: center;
+         }
+         .button {
+            width:100%;
+            display:block;
+            border-radius:30px;
+         }
+
+/*ADDED FROM STYLE.CSS*/
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+   width: 50%;
+   text-align: center;
+   border-radius: 16px;
+   overflow: hidden;
+   padding-top: 30px;
+  }
+   .text {
+     padding: 5px;
+   }
+   a{
+     background-color: #cccccc;
+   text-decoration: none;
+   font-size: 20px;
+   padding: 2px;
+   }
+        .calculator {
+            width: 400px;
+            height: 450px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 20px 0px 0px 100px;
+            border-radius: 50px;
+            color: white;
+        }
+          
+        input {
+            padding: 7px;
+            width: 70%;
+            margin-top: 7px;
+        }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+<meta http-equiv="X-UA-Compartible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/allstyle.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/basic.css'%}">
+<!--<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">-->
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/css/bootstrap.css'%}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome-4.0.3.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome/css/all.css'%}">
+<link rel="stylesheet" href="{% static 'css/emtrack.css' %}">
+<link rel="stylesheet" href="{% static 'css/rest_framework/...' %}">
+    
+    <script type="text/javascript" src="{% static 'js/jquery.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'js/popper.min.js'%}"></script>
+<!--Fussioncharts-->
+<script type="text/javascript" src="{% static 'fusioncharts/js/fusioncharts.js' %}"></script>
+<script type="text/javascript" src="{% static 'fusioncharts/js/fusioncharts.charts.js' %}"></script>
+<script type="text/javascript" src="{% static 'fusioncharts/js/themes/fusioncharts.theme.zune.js'%}"></script>
+<script type="text/javascript" src="{%static 'fusioncharts/..'%}"></script>
+<script type="text/javascript">
+   
+   $(document).ready(function(){
+    window.setTimeout(function(){
+      $(".alert").fadeTo(500,0).slideUp(500,function()){
+        $(this).remove();
+      }
+    });
+   },5000);
+ </script>
+
+ 
+ <!--<script type="text/javascript" src="{%static 'js/respond.js'%}"></script>
+ <script type="text/javascript" src="{%static 'scottjeh/..'%}"></script>-->
+ {{script|safe}}
+<title>{% block title%} Home {% endblock %} </title>
+</head>
+
+<body class="bg">
+<div class="container-fluid">
+    <!-- Second navbar for categories -->
+
+    <nav class="navbar navbar-expand-md navbar-dark " style="background-color:#008000;">
+    
+     <!--<nav class="navbar navbar-expand-md navbar-dark " style="background-color:#32CD32;">-->
+        <h1><a class="navbar-brand" href="#"><span>e</span><i style="background: black;">loan</i></a></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{%url 'home'%}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{%url 'loans'%}">Loans</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown">
+                <a class="dropdown-item" href="{%url 'profile'%}">Profile</a>
+                <a class="dropdown-item" href="{%url 'contact'%}">Contact Us</a>
+                <a class="dropdown-item" href="#">About</a>
+              </div>
+            </li>
+
+
+  {% if user.is_authenticated %}
+    
+    <button class="btn btn-primary" value="submit" 
+            onclick="window.location='{%url 'logout'%}'" style="margin-right: 10px; border-radius:30px;">Logout<span class="fas fa-sign-out-alt"></span></button>
+  {% else %}
+     <button class="btn btn-primary" value="submit" 
+            onclick="window.location='{%url 'login'%}'" style="margin-right: 10px; border-radius:30px;">Login<span class="icon login"></span></button> <br/>
+
+    <button class="btn btn-primary" value="submit" 
+            onclick="window.location='{%url 'register'%}'" style="margin-right: 10px; border-radius:30px;">Register<span class="icon login"></span></button>
+  {% endif %}
+
+          <br/>
+          </ul>
+  
+        </div>
+      </nav>
+
+
+{%block content%}
+
+{%endblock%}
+<div class="footer">
+  <p>&copy Copyright 2023.Developed by satwinder @wintech solutions</p>
+</div>
+
+</div>
+</body>
+</html>
+
+
